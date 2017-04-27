@@ -7,21 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9873E417E502F649C723EE14 /* Pods_BeerBeaconAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DC5B58E74915093201BE14 /* Pods_BeerBeaconAdmin.framework */; };
 		F413B8BB1EB1854700076B22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413B8BA1EB1854700076B22 /* AppDelegate.swift */; };
 		F413B8BD1EB1854700076B22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413B8BC1EB1854700076B22 /* ViewController.swift */; };
-		F413B8C01EB1854700076B22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F413B8BE1EB1854700076B22 /* Main.storyboard */; };
 		F413B8C21EB1854700076B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F413B8C11EB1854700076B22 /* Assets.xcassets */; };
 		F413B8C51EB1854700076B22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F413B8C31EB1854700076B22 /* LaunchScreen.storyboard */; };
+		F413B8CD1EB185B500076B22 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F413B8CC1EB185B500076B22 /* Podfile */; };
+		F413B8CF1EB186AA00076B22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F413B8CE1EB186AA00076B22 /* Main.storyboard */; };
+		F413B8D31EB1873B00076B22 /* Medida.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413B8D11EB1873B00076B22 /* Medida.swift */; };
+		F413B8D41EB1873B00076B22 /* Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413B8D21EB1873B00076B22 /* Tap.swift */; };
+		F413B8E31EB187B000076B22 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413B8E01EB187B000076B22 /* DemoCell.swift */; };
+		F413B8E41EB187B000076B22 /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413B8E11EB187B000076B22 /* FoldingCell.swift */; };
+		F413B8E51EB187B000076B22 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413B8E21EB187B000076B22 /* MainTableViewController.swift */; };
+		F413B8E71EB1883600076B22 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F413B8E61EB1883600076B22 /* GoogleService-Info.plist */; };
+		F413B8E91EB193BB00076B22 /* MainSearchUntappdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413B8E81EB193BB00076B22 /* MainSearchUntappdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A7DC5B58E74915093201BE14 /* Pods_BeerBeaconAdmin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerBeaconAdmin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B44BF1EEE9DCC6F6C02FBEFB /* Pods-BeerBeaconAdmin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerBeaconAdmin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeerBeaconAdmin/Pods-BeerBeaconAdmin.debug.xcconfig"; sourceTree = "<group>"; };
+		B782898B262AD68DC542CDB9 /* Pods-BeerBeaconAdmin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerBeaconAdmin.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeerBeaconAdmin/Pods-BeerBeaconAdmin.release.xcconfig"; sourceTree = "<group>"; };
 		F413B8B71EB1854700076B22 /* BeerBeaconAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerBeaconAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F413B8BA1EB1854700076B22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F413B8BC1EB1854700076B22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F413B8BF1EB1854700076B22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F413B8C11EB1854700076B22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F413B8C41EB1854700076B22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F413B8C61EB1854700076B22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F413B8CC1EB185B500076B22 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		F413B8CE1EB186AA00076B22 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F413B8D11EB1873B00076B22 /* Medida.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medida.swift; sourceTree = "<group>"; };
+		F413B8D21EB1873B00076B22 /* Tap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tap.swift; sourceTree = "<group>"; };
+		F413B8D61EB1875100076B22 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		F413B8D71EB1875100076B22 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F413B8D81EB1875100076B22 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		F413B8D91EB1875100076B22 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		F413B8DA1EB1875100076B22 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		F413B8DB1EB1875100076B22 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		F413B8DC1EB1875100076B22 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		F413B8DD1EB1875100076B22 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		F413B8DE1EB1875100076B22 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		F413B8DF1EB1875100076B22 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		F413B8E01EB187B000076B22 /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
+		F413B8E11EB187B000076B22 /* FoldingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingCell.swift; sourceTree = "<group>"; };
+		F413B8E21EB187B000076B22 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		F413B8E61EB1883600076B22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F413B8E81EB193BB00076B22 /* MainSearchUntappdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSearchUntappdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +59,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9873E417E502F649C723EE14 /* Pods_BeerBeaconAdmin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0061720A8DBC6A32BD446CB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B44BF1EEE9DCC6F6C02FBEFB /* Pods-BeerBeaconAdmin.debug.xcconfig */,
+				B782898B262AD68DC542CDB9 /* Pods-BeerBeaconAdmin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A3BA2975D2716ED43EA87A8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7DC5B58E74915093201BE14 /* Pods_BeerBeaconAdmin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F413B8AE1EB1854700076B22 = {
 			isa = PBXGroup;
 			children = (
+				F413B8CC1EB185B500076B22 /* Podfile */,
 				F413B8B91EB1854700076B22 /* BeerBeaconAdmin */,
 				F413B8B81EB1854700076B22 /* Products */,
+				0061720A8DBC6A32BD446CB0 /* Pods */,
+				A3BA2975D2716ED43EA87A8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +105,47 @@
 		F413B8B91EB1854700076B22 /* BeerBeaconAdmin */ = {
 			isa = PBXGroup;
 			children = (
+				F413B8D51EB1874400076B22 /* Fonts */,
+				F413B8D01EB1872D00076B22 /* Model */,
+				F413B8CE1EB186AA00076B22 /* Main.storyboard */,
 				F413B8BA1EB1854700076B22 /* AppDelegate.swift */,
+				F413B8E01EB187B000076B22 /* DemoCell.swift */,
+				F413B8E11EB187B000076B22 /* FoldingCell.swift */,
+				F413B8E21EB187B000076B22 /* MainTableViewController.swift */,
+				F413B8E81EB193BB00076B22 /* MainSearchUntappdViewController.swift */,
 				F413B8BC1EB1854700076B22 /* ViewController.swift */,
-				F413B8BE1EB1854700076B22 /* Main.storyboard */,
 				F413B8C11EB1854700076B22 /* Assets.xcassets */,
 				F413B8C31EB1854700076B22 /* LaunchScreen.storyboard */,
 				F413B8C61EB1854700076B22 /* Info.plist */,
+				F413B8E61EB1883600076B22 /* GoogleService-Info.plist */,
 			);
 			path = BeerBeaconAdmin;
+			sourceTree = "<group>";
+		};
+		F413B8D01EB1872D00076B22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F413B8D11EB1873B00076B22 /* Medida.swift */,
+				F413B8D21EB1873B00076B22 /* Tap.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F413B8D51EB1874400076B22 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F413B8D61EB1875100076B22 /* OpenSans-Bold.ttf */,
+				F413B8D71EB1875100076B22 /* OpenSans-BoldItalic.ttf */,
+				F413B8D81EB1875100076B22 /* OpenSans-ExtraBold.ttf */,
+				F413B8D91EB1875100076B22 /* OpenSans-ExtraBoldItalic.ttf */,
+				F413B8DA1EB1875100076B22 /* OpenSans-Italic.ttf */,
+				F413B8DB1EB1875100076B22 /* OpenSans-Light.ttf */,
+				F413B8DC1EB1875100076B22 /* OpenSans-LightItalic.ttf */,
+				F413B8DD1EB1875100076B22 /* OpenSans-Regular.ttf */,
+				F413B8DE1EB1875100076B22 /* OpenSans-Semibold.ttf */,
+				F413B8DF1EB1875100076B22 /* OpenSans-SemiboldItalic.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F413B8C91EB1854700076B22 /* Build configuration list for PBXNativeTarget "BeerBeaconAdmin" */;
 			buildPhases = (
+				7A506BF4BD4315D1F48FD113 /* [CP] Check Pods Manifest.lock */,
 				F413B8B31EB1854700076B22 /* Sources */,
 				F413B8B41EB1854700076B22 /* Frameworks */,
 				F413B8B51EB1854700076B22 /* Resources */,
+				C2767AB32B9CB93EC1369621 /* [CP] Embed Pods Frameworks */,
+				EB4B2F7F5B4A56AEAD2D9F74 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,6 +184,7 @@
 					F413B8B61EB1854700076B22 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = RREN52MQC8;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -125,12 +213,62 @@
 			buildActionMask = 2147483647;
 			files = (
 				F413B8C51EB1854700076B22 /* LaunchScreen.storyboard in Resources */,
+				F413B8CF1EB186AA00076B22 /* Main.storyboard in Resources */,
+				F413B8E71EB1883600076B22 /* GoogleService-Info.plist in Resources */,
 				F413B8C21EB1854700076B22 /* Assets.xcassets in Resources */,
-				F413B8C01EB1854700076B22 /* Main.storyboard in Resources */,
+				F413B8CD1EB185B500076B22 /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7A506BF4BD4315D1F48FD113 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C2767AB32B9CB93EC1369621 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeerBeaconAdmin/Pods-BeerBeaconAdmin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB4B2F7F5B4A56AEAD2D9F74 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeerBeaconAdmin/Pods-BeerBeaconAdmin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F413B8B31EB1854700076B22 /* Sources */ = {
@@ -138,21 +276,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				F413B8BD1EB1854700076B22 /* ViewController.swift in Sources */,
+				F413B8D41EB1873B00076B22 /* Tap.swift in Sources */,
+				F413B8D31EB1873B00076B22 /* Medida.swift in Sources */,
 				F413B8BB1EB1854700076B22 /* AppDelegate.swift in Sources */,
+				F413B8E31EB187B000076B22 /* DemoCell.swift in Sources */,
+				F413B8E41EB187B000076B22 /* FoldingCell.swift in Sources */,
+				F413B8E91EB193BB00076B22 /* MainSearchUntappdViewController.swift in Sources */,
+				F413B8E51EB187B000076B22 /* MainTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F413B8BE1EB1854700076B22 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F413B8BF1EB1854700076B22 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F413B8C31EB1854700076B22 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -261,6 +397,7 @@
 		};
 		F413B8CA1EB1854700076B22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B44BF1EEE9DCC6F6C02FBEFB /* Pods-BeerBeaconAdmin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RREN52MQC8;
@@ -274,6 +411,7 @@
 		};
 		F413B8CB1EB1854700076B22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B782898B262AD68DC542CDB9 /* Pods-BeerBeaconAdmin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RREN52MQC8;
@@ -304,6 +442,7 @@
 				F413B8CB1EB1854700076B22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
