@@ -24,6 +24,9 @@ class DemoCell: FoldingCell {
   @IBOutlet weak var openNumberLabel: UILabel!
   @IBOutlet weak var option1: UISwitch!
   @IBOutlet weak var option2: UISwitch!
+  @IBOutlet weak var view_disable: UIView!
+    
+  @IBOutlet weak var optionEnableDisable: UISwitch!
     
     
   var number: Int = 0 {
@@ -39,6 +42,8 @@ class DemoCell: FoldingCell {
     
     option1.addTarget(self, action: #selector(DemoCell.stateChangedOption1), for: UIControlEvents.valueChanged)
     option2.addTarget(self, action: #selector(DemoCell.stateChangedOption2), for: UIControlEvents.valueChanged)
+    
+    optionEnableDisable.addTarget(self, action: #selector(DemoCell.stateChangedOption), for: UIControlEvents.valueChanged)
     
     super.awakeFromNib()
   }
@@ -58,6 +63,21 @@ class DemoCell: FoldingCell {
   func stateChangedOption2(){
     if(option1.isOn){
         option1.setOn(false, animated: true)
+    }
+  }
+    
+  func stateChangedOption(){
+        if(optionEnableDisable.isOn){
+            
+            UIView.animate(withDuration: 1, animations: {
+                self.view_disable.alpha = 0
+            }, completion: nil)
+
+        }else{
+            
+            UIView.animate(withDuration: 1, animations: {
+                self.view_disable.alpha = 0.8
+            }, completion: nil)
     }
   }
     

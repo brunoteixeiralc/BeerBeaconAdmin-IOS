@@ -36,6 +36,9 @@ class Tap {
     
     private let tapRef = FIRDatabase.database().reference().child("taps")
     
+    init() {
+    }
+    
     init(abv:String,ibu:Int,cerveja:String,cervejaria:String,estilo:String,nota:String,torneira:String,medidas:[Medida],hora_plug:String,data_plug:String,cervejaria_img_url:String,cerveja_img_url:String) {
         self.abv = abv
         self.ibu = ibu

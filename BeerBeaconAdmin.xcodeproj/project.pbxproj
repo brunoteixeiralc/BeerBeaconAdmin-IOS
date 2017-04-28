@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9873E417E502F649C723EE14 /* Pods_BeerBeaconAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DC5B58E74915093201BE14 /* Pods_BeerBeaconAdmin.framework */; };
+		F4073A631EB2CBA800DE8391 /* UntappdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4073A621EB2CBA800DE8391 /* UntappdCell.swift */; };
 		F413B8BB1EB1854700076B22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413B8BA1EB1854700076B22 /* AppDelegate.swift */; };
 		F413B8BD1EB1854700076B22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413B8BC1EB1854700076B22 /* ViewController.swift */; };
 		F413B8C21EB1854700076B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F413B8C11EB1854700076B22 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		A7DC5B58E74915093201BE14 /* Pods_BeerBeaconAdmin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeerBeaconAdmin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B44BF1EEE9DCC6F6C02FBEFB /* Pods-BeerBeaconAdmin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerBeaconAdmin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeerBeaconAdmin/Pods-BeerBeaconAdmin.debug.xcconfig"; sourceTree = "<group>"; };
 		B782898B262AD68DC542CDB9 /* Pods-BeerBeaconAdmin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeerBeaconAdmin.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeerBeaconAdmin/Pods-BeerBeaconAdmin.release.xcconfig"; sourceTree = "<group>"; };
+		F4073A621EB2CBA800DE8391 /* UntappdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UntappdCell.swift; sourceTree = "<group>"; };
 		F413B8B71EB1854700076B22 /* BeerBeaconAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerBeaconAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F413B8BA1EB1854700076B22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F413B8BC1EB1854700076B22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				F413B8E11EB187B000076B22 /* FoldingCell.swift */,
 				F413B8E21EB187B000076B22 /* MainTableViewController.swift */,
 				F413B8E81EB193BB00076B22 /* MainSearchUntappdViewController.swift */,
+				F4073A621EB2CBA800DE8391 /* UntappdCell.swift */,
 				F413B8BC1EB1854700076B22 /* ViewController.swift */,
 				F413B8C11EB1854700076B22 /* Assets.xcassets */,
 				F413B8C31EB1854700076B22 /* LaunchScreen.storyboard */,
@@ -280,6 +283,7 @@
 				F413B8D31EB1873B00076B22 /* Medida.swift in Sources */,
 				F413B8BB1EB1854700076B22 /* AppDelegate.swift in Sources */,
 				F413B8E31EB187B000076B22 /* DemoCell.swift in Sources */,
+				F4073A631EB2CBA800DE8391 /* UntappdCell.swift in Sources */,
 				F413B8E41EB187B000076B22 /* FoldingCell.swift in Sources */,
 				F413B8E91EB193BB00076B22 /* MainSearchUntappdViewController.swift in Sources */,
 				F413B8E51EB187B000076B22 /* MainTableViewController.swift in Sources */,
