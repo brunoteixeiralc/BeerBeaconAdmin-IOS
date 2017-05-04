@@ -29,6 +29,7 @@ class MainSearchUntappdViewController:UITableViewController{
         searchController.searchBar.sizeToFit()
         searchController.searchBar.tintColor = UIColor(red: 255/255, green: 212/255, blue: 0/255, alpha: 1.0)
         searchController.searchBar.barTintColor = UIColor.white
+        searchController.searchBar.delegate = self
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
 
@@ -59,10 +60,10 @@ class MainSearchUntappdViewController:UITableViewController{
     
     func filterContentForSearchText(searchText: String) {
         
-        if(searchText.characters.count >= 4){
+       // if(searchText.characters.count >= 4){
            KVNProgress.show(withStatus: "Procurando", on: view)
            getBeer(query: searchText)
-        }
+       // }
 
     }
     
@@ -85,7 +86,6 @@ class MainSearchUntappdViewController:UITableViewController{
         self.taps.removeAll()
         
         let p: Parameters = ["q":query,
-                             "sort":"name",
                                       "client_secret":"E0897A98862FB4E023CE3C0DD7E374103CEFF5A0",
                                       "client_id":"06E50AB61747E247A8E9B6FE61B219C527770491"]
 
@@ -128,13 +128,27 @@ class MainSearchUntappdViewController:UITableViewController{
   
   }
 
-extension MainSearchUntappdViewController:UISearchResultsUpdating{
+extension MainSearchUntappdViewController:UISearchResultsUpdating,UISearchBarDelegate{
     @available(iOS 8.0, *)
     func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchText: searchController.searchBar.text!)
+        //filterContentForSearchText(searchText: searchController.searchBar.text!)
     }
 
     func updateSearchResultsForSearchController(searchController: UISearchController) {
+        //filterContentForSearchText(searchText: searchController.searchBar.text!)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        KVNProgress.show(withStatus: "Procurando", on: view)
+        getBeer(query: searchController.searchBar.text!)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(self.callWsUntappd), object: nil)
+        self.perform(#selector(self.callWsUntappd), with: nil, afterDelay: 1.5)
+    }
+    
+    func callWsUntappd() {
         filterContentForSearchText(searchText: searchController.searchBar.text!)
     }
     
