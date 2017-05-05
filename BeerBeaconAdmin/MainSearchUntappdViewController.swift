@@ -54,8 +54,20 @@ class MainSearchUntappdViewController:UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier == "mostrarDescricao"){
+            
+            let controller = (segue.destination as! UITableViewController) as! MainDescriptionTableViewController
+            let path = (tableView.indexPathForSelectedRow! as IndexPath).row
+            let tap = taps[path] as Tap
+            controller.tapSelecionado = tap
+        
+        }
     }
     
     func filterContentForSearchText(searchText: String) {
@@ -109,13 +121,18 @@ class MainSearchUntappdViewController:UITableViewController{
                     
                     let tap:Tap = Tap()
                     
-                    let beer = item["beer"] as? [String:Any]
-                    tap.cerveja = beer?["beer_name"] as! String
-                    tap.estilo = beer?["beer_style"] as! String
-                    tap.cerveja_img_url = beer?["beer_label"] as! String
+                    let beer = item["beer"] as! [String:Any]
+                    tap.cerveja = beer["beer_name"] as! String
+                    tap.estilo = beer["beer_style"] as! String
+                    tap.cerveja_img_url = beer["beer_label"] as! String
+                    tap.bid = beer["bid"] as! Int
+                    tap.em_producao = beer["in_production"] as! Int
+                    tap.abv = String(beer["beer_abv"] as! Int)
+                    tap.ibu = beer["beer_ibu"] as! Int
                     
-                    let brewery = item["brewery"] as? [String:Any]
-                    tap.cervejaria = brewery?["brewery_name"] as! String
+                    let brewery = item["brewery"] as! [String:Any]
+                    tap.cervejaria = brewery["brewery_name"] as! String
+                    tap.cervejaria_img_url = brewery["brewery_label"] as! String
                     
                     self.taps.append(tap)
                 }

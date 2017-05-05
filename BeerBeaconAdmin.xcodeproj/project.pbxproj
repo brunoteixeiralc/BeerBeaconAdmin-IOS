@@ -22,6 +22,7 @@
 		F413B8E51EB187B000076B22 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413B8E21EB187B000076B22 /* MainTableViewController.swift */; };
 		F413B8E71EB1883600076B22 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F413B8E61EB1883600076B22 /* GoogleService-Info.plist */; };
 		F413B8E91EB193BB00076B22 /* MainSearchUntappdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413B8E81EB193BB00076B22 /* MainSearchUntappdViewController.swift */; };
+		F44B6EDD1EBCFA80008663D8 /* MainDescriptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B6EDC1EBCFA80008663D8 /* MainDescriptionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		F413B8E21EB187B000076B22 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		F413B8E61EB1883600076B22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F413B8E81EB193BB00076B22 /* MainSearchUntappdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSearchUntappdViewController.swift; sourceTree = "<group>"; };
+		F44B6EDC1EBCFA80008663D8 /* MainDescriptionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDescriptionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				F413B8E01EB187B000076B22 /* DemoCell.swift */,
 				F413B8E11EB187B000076B22 /* FoldingCell.swift */,
 				F413B8E21EB187B000076B22 /* MainTableViewController.swift */,
+				F44B6EDC1EBCFA80008663D8 /* MainDescriptionTableViewController.swift */,
 				F413B8E81EB193BB00076B22 /* MainSearchUntappdViewController.swift */,
 				F4073A621EB2CBA800DE8391 /* UntappdCell.swift */,
 				F413B8BC1EB1854700076B22 /* ViewController.swift */,
@@ -287,6 +290,7 @@
 				F413B8E41EB187B000076B22 /* FoldingCell.swift in Sources */,
 				F413B8E91EB193BB00076B22 /* MainSearchUntappdViewController.swift in Sources */,
 				F413B8E51EB187B000076B22 /* MainTableViewController.swift in Sources */,
+				F44B6EDD1EBCFA80008663D8 /* MainDescriptionTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +410,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RREN52MQC8;
 				INFOPLIST_FILE = BeerBeaconAdmin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.BeerBeaconAdmin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,6 +425,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RREN52MQC8;
 				INFOPLIST_FILE = BeerBeaconAdmin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.BeerBeaconAdmin;
 				PRODUCT_NAME = "$(TARGET_NAME)";

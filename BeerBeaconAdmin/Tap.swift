@@ -33,13 +33,17 @@ class Tap {
     var hora_plug = ""
     var cervejaria_img_url = ""
     var cerveja_img_url = ""
+    var bid = 0
+    var em_producao = 0
+    var descricao = ""
+    
     
     private let tapRef = FIRDatabase.database().reference().child("taps")
     
     init() {
     }
     
-    init(abv:String,ibu:Int,cerveja:String,cervejaria:String,estilo:String,nota:String,torneira:String,medidas:[Medida],hora_plug:String,data_plug:String,cervejaria_img_url:String,cerveja_img_url:String) {
+    init(abv:String,ibu:Int,cerveja:String,cervejaria:String,estilo:String,nota:String,torneira:String,medidas:[Medida],hora_plug:String,data_plug:String,cervejaria_img_url:String,cerveja_img_url:String,bid:Int) {
         self.abv = abv
         self.ibu = ibu
         self.cerveja = cerveja
@@ -52,6 +56,7 @@ class Tap {
         self.data_plug = data_plug
         self.cervejaria_img_url = cervejaria_img_url
         self.cerveja_img_url = cerveja_img_url
+        self.bid = bid
     }
     
     init(snapshot: FIRDataSnapshot)
