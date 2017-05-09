@@ -11,6 +11,7 @@ import Firebase
 
 class Medida {
     
+    var uid = ""
     var preco = ""
     var quantidade = ""
 
@@ -23,7 +24,7 @@ class Medida {
         
         return [
             "preco": preco,
-            "IBU": quantidade
+            "quantidade": quantidade
         ]
     }
 

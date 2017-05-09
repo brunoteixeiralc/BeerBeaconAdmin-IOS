@@ -10,6 +10,7 @@ import UIKit
 import KVNProgress
 import Alamofire
 import Kingfisher
+import SCLAlertView
 
 extension Double {
     func format(f: String) -> String {
@@ -43,7 +44,15 @@ class MainDescriptionTableViewController: UITableViewController {
     
     @IBAction func buttonHandler(_ sender: AnyObject) {
         
-        let newTap = Tap(abv: tapSelecionado.abv, ibu: tapSelecionado.ibu, cerveja: tapSelecionado.cerveja, cervejaria: tapSelecionado.cervejaria, estilo: tapSelecionado.estilo, nota: (Double(self.tapSelecionado.nota)?.format(f: ".2"))!, cervejaria_img_url: tapSelecionado.cervejaria_img_url, cerveja_img_url: tapSelecionado.cerveja_img_url, bid: tapSelecionado.bid, data_entrada: Int(Date().timeIntervalSince1970),status:"desativado")
+        let newMedida = Medida(preco: "30,00", quantidade: "100ml")
+        let newMedida2 = Medida(preco: "10,00", quantidade: "50ml")
+        
+        var med = [Medida]()
+        med.append(newMedida)
+        med.append(newMedida2)
+        
+        let newTap = Tap(abv: tapSelecionado.abv, ibu: tapSelecionado.ibu, cerveja: tapSelecionado.cerveja, cervejaria: tapSelecionado.cervejaria, estilo: tapSelecionado.estilo, nota: (Double(self.tapSelecionado.nota)?.format(f: ".2"))!, cervejaria_img_url: tapSelecionado.cervejaria_img_url, cerveja_img_url: tapSelecionado.cerveja_img_url, bid: tapSelecionado.bid, data_entrada: Int(Date().timeIntervalSince1970),status:"desativado",medidas:med)
+        
         newTap.save { (error) in
             if error != nil{
                print(error!)

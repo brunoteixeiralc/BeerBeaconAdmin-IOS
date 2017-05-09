@@ -112,12 +112,12 @@ open class FoldingCell: UITableViewCell {
           hora_plugado.text = tap.hora_plug
           nota.text = tap.nota
           
-            if(tap.medidas.count != 0){
-                op1_copo.text = tap.medidas[0].quantidade
-                op1_preco.text = "R$ \(tap.medidas[0].preco)"
-                op2_copo.text = tap.medidas[1].quantidade
-                op2_preco.text = "R$ \(tap.medidas[1].preco)"
-            }
+          if(tap.medidas.count != 0){
+             op1_copo.text = tap.medidas[0].quantidade
+             op1_preco.text = "R$ \(tap.medidas[0].preco)"
+             op2_copo.text = tap.medidas[1].quantidade
+             op2_preco.text = "R$ \(tap.medidas[1].preco)"
+          }
             
           let urlCv = URL(string: tap.cerveja_img_url)
           cerveja_img.kf.setImage(with: urlCv, options: [.transition(.fade(0.2))])

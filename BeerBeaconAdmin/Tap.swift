@@ -62,7 +62,7 @@ class Tap {
     }
     
 
-    init(abv:String,ibu:Int,cerveja:String,cervejaria:String,estilo:String,nota:String,cervejaria_img_url:String,cerveja_img_url:String,bid:Int,data_entrada:Int,status:String) {
+    init(abv:String,ibu:Int,cerveja:String,cervejaria:String,estilo:String,nota:String,cervejaria_img_url:String,cerveja_img_url:String,bid:Int,data_entrada:Int,status:String,medidas:[Medida]) {
         self.abv = abv
         self.ibu = ibu
         self.cerveja = cerveja
@@ -74,6 +74,7 @@ class Tap {
         self.bid = bid
         self.data_entrada = data_entrada
         self.status = status
+        self.medidas = medidas
     }
     
     init(snapshot: FIRDataSnapshot)
@@ -115,9 +116,9 @@ class Tap {
         let ref = tapRef.childByAutoId()
         ref.setValue(toDictionary())
         
-//        for medida in medidas{
-//            ref.child("medidas").childByAutoId().setValue(medida.toDictionary())
-//        }
+        for medida in medidas{
+            ref.child("medidas").childByAutoId().setValue(medida.toDictionary())
+        }
     }
     
     func updateStatus(uid:String,completion:@escaping (Error?) -> Void){
@@ -129,7 +130,7 @@ class Tap {
     func toDictionary() -> [String:Any]{
         
         return [
-            "ABV": "\(abv)%",
+            "ABV": abv,
             "IBU": ibu,
             "estilo": estilo,
             "cerveja": cerveja,
