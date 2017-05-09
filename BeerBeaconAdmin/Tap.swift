@@ -114,6 +114,10 @@ class Tap {
         
         let ref = tapRef.childByAutoId()
         ref.setValue(toDictionary())
+        
+//        for medida in medidas{
+//            ref.child("medidas").childByAutoId().setValue(medida.toDictionary())
+//        }
     }
     
     func updateStatus(uid:String,completion:@escaping (Error?) -> Void){
