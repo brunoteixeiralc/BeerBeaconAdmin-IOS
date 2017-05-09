@@ -72,10 +72,10 @@ class MainSearchUntappdViewController:UITableViewController{
     
     func filterContentForSearchText(searchText: String) {
         
-       // if(searchText.characters.count >= 4){
+        if(!searchText.isEmpty){
            KVNProgress.show(withStatus: "Procurando", on: view)
            getBeer(query: searchText)
-       // }
+        }
 
     }
     
@@ -156,13 +156,15 @@ extension MainSearchUntappdViewController:UISearchResultsUpdating,UISearchBarDel
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        KVNProgress.show(withStatus: "Procurando", on: view)
-        getBeer(query: searchController.searchBar.text!)
+        if(!(searchController.searchBar.text?.isEmpty)!){
+            KVNProgress.show(withStatus: "Procurando", on: view)
+            getBeer(query: searchController.searchBar.text!)
+        }
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(self.callWsUntappd), object: nil)
-        self.perform(#selector(self.callWsUntappd), with: nil, afterDelay: 1.5)
+            NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(self.callWsUntappd), object: nil)
+            self.perform(#selector(self.callWsUntappd), with: nil, afterDelay: 1.5)
     }
     
     func callWsUntappd() {

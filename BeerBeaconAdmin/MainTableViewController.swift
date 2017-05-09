@@ -43,27 +43,34 @@ class MainTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        setupConfig()
-        KVNProgress.show(withStatus: "Carregando", on: view)
+        if self.taps.count == 0 {
+            
+           setupConfig()
+           KVNProgress.show(withStatus: "Carregando", on: view)
+        }
+
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        FIRDatabase.database().reference().child("taps").observe(.value, with: { (snapshot) in
+         if self.taps.count == 0 {
             
-            self.taps.removeAll()
-            
-            for child in snapshot.children{
-                let tap = Tap(snapshot: child as! FIRDataSnapshot)
-                self.taps.insert(tap, at: 0)
-            }
-            
-            self.tableView.reloadData()
-            
-            KVNProgress.dismiss()
-        })
-
+            FIRDatabase.database().reference().child("taps").observe(.value, with: { (snapshot) in
+                
+                self.taps.removeAll()
+                
+                for child in snapshot.children{
+                    let tap = Tap(snapshot: child as! FIRDataSnapshot)
+                    tap.uid = (child as AnyObject).key
+                    self.taps.append(tap)
+                }
+                
+                self.tableView.reloadData()
+                
+                KVNProgress.dismiss()
+            })
+        }
     }
     
     func setupConfig() {

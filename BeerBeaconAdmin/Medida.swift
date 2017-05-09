@@ -18,5 +18,14 @@ class Medida {
         self.preco = preco
         self.quantidade = quantidade
     }
+    
+    func toDictionary() -> [String:Any]{
+        
+        return [
+            "preco": preco,
+            "IBU": quantidade
+        ]
+    }
+
 }
 

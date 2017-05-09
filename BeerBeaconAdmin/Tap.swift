@@ -36,6 +36,8 @@ class Tap {
     var bid = 0
     var em_producao = 0
     var descricao = ""
+    var status = ""
+    var uid = ""
     
     
     private let tapRef = FIRDatabase.database().reference().child("taps")
@@ -59,6 +61,21 @@ class Tap {
         self.bid = bid
     }
     
+
+    init(abv:String,ibu:Int,cerveja:String,cervejaria:String,estilo:String,nota:String,cervejaria_img_url:String,cerveja_img_url:String,bid:Int,data_entrada:Int,status:String) {
+        self.abv = abv
+        self.ibu = ibu
+        self.cerveja = cerveja
+        self.cervejaria = cervejaria
+        self.estilo = estilo
+        self.nota = nota
+        self.cervejaria_img_url = cervejaria_img_url
+        self.cerveja_img_url = cerveja_img_url
+        self.bid = bid
+        self.data_entrada = data_entrada
+        self.status = status
+    }
+    
     init(snapshot: FIRDataSnapshot)
     {
         if let value = snapshot.value as? [String : Any] {
@@ -72,6 +89,7 @@ class Tap {
             data_entrada = Int(value["data_entrada"] as! NSNumber)
             cervejaria_img_url = value["img_cervejaria"] as! String
             cerveja_img_url = value["img_cerveja"] as! String
+            status = value["status"] as! String
             
             let date = NSDate(timeIntervalSince1970: TimeInterval(data_entrada))
             NSTimeZone.default = TimeZone(abbreviation: "GMT")!
@@ -91,6 +109,36 @@ class Tap {
             }
         }
     }
+    
+    func save(completion:@escaping (Error?) -> Void){
+        
+        let ref = tapRef.childByAutoId()
+        ref.setValue(toDictionary())
+    }
+    
+    func updateStatus(uid:String,completion:@escaping (Error?) -> Void){
+        
+        let ref = tapRef.child(uid)
+        ref.setValue(toDictionary())
+    }
+    
+    func toDictionary() -> [String:Any]{
+        
+        return [
+            "ABV": "\(abv)%",
+            "IBU": ibu,
+            "estilo": estilo,
+            "cerveja": cerveja,
+            "cervejaria":cervejaria,
+            "data_entrada":data_entrada,
+            "img_cerveja":cerveja_img_url,
+            "img_cervejaria":cervejaria_img_url,
+            "nota":nota,
+            "bid":bid,
+            "status":status
+        ]
+    }
+
     
 }
 

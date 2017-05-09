@@ -24,10 +24,6 @@ class DemoCell: FoldingCell {
   @IBOutlet weak var openNumberLabel: UILabel!
   @IBOutlet weak var option1: UISwitch!
   @IBOutlet weak var option2: UISwitch!
-  @IBOutlet weak var view_disable: UIView!
-    
-  @IBOutlet weak var optionEnableDisable: UISwitch!
-    
     
   var number: Int = 0 {
     didSet {
@@ -47,7 +43,7 @@ class DemoCell: FoldingCell {
     
     super.awakeFromNib()
   }
-  
+   
   override func animationDuration(_ itemIndex:NSInteger, type:AnimationType)-> TimeInterval {
     
     let durations = [0.26, 0.2, 0.2]
@@ -78,9 +74,15 @@ class DemoCell: FoldingCell {
             UIView.animate(withDuration: 1, animations: {
                 self.view_disable.alpha = 0.8
             }, completion: nil)
-    }
-  }
+        }
     
+    let tapStatusUpdate = Tap(abv: tap.abv, ibu: tap.ibu, cerveja: tap.cerveja, cervejaria: tap.cervejaria, estilo: tap.estilo, nota: tap.nota, cervejaria_img_url: tap.cervejaria_img_url, cerveja_img_url: tap.cerveja_img_url, bid: tap.bid, data_entrada:tap.data_entrada,status:optionEnableDisable.isOn == true ? "ativado" : "desativado")
+        tapStatusUpdate.updateStatus(uid: tap.uid) { (error) in
+            if error != nil {
+                print(error!)
+            }
+        }
+    }
 }
 
 extension DemoCell {

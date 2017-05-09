@@ -52,7 +52,11 @@ open class FoldingCell: UITableViewCell {
   @IBOutlet weak var cerveja_img: UIImageView!
   @IBOutlet weak var nota: UILabel!
   @IBOutlet weak var cerveja_ext_img: UIImageView!
-  
+    
+  @IBOutlet weak var optionEnableDisable: UISwitch!
+  @IBOutlet weak var view_disable: UIView!
+
+    
   /// UIView whitch display when cell close
   @IBOutlet weak open var foregroundView: RotatedView!
   @IBOutlet weak open var foregroundViewTop: NSLayoutConstraint!
@@ -108,10 +112,12 @@ open class FoldingCell: UITableViewCell {
           hora_plugado.text = tap.hora_plug
           nota.text = tap.nota
           
-          op1_copo.text = tap.medidas[0].quantidade
-          op1_preco.text = "R$ \(tap.medidas[0].preco)"
-          op2_copo.text = tap.medidas[1].quantidade
-          op2_preco.text = "R$ \(tap.medidas[1].preco)"
+            if(tap.medidas.count != 0){
+                op1_copo.text = tap.medidas[0].quantidade
+                op1_preco.text = "R$ \(tap.medidas[0].preco)"
+                op2_copo.text = tap.medidas[1].quantidade
+                op2_preco.text = "R$ \(tap.medidas[1].preco)"
+            }
             
           let urlCv = URL(string: tap.cerveja_img_url)
           cerveja_img.kf.setImage(with: urlCv, options: [.transition(.fade(0.2))])
@@ -126,6 +132,16 @@ open class FoldingCell: UITableViewCell {
           cervejaria_img.kf.setImage(with: urlCj, options: [.transition(.fade(0.2))])
           cervejaria_img.kf.indicatorType = .activity
           cervejaria_img.kf.setImage(with: urlCj)
+            
+          if(tap.status == "desativado"){
+                optionEnableDisable.isOn = false
+                self.view_disable.alpha = 0.8
+            
+          }else{
+                optionEnableDisable.isOn = true
+                self.view_disable.alpha = 0
+          }
+        
         }
     }
   

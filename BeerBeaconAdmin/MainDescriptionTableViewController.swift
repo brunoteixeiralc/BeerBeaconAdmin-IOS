@@ -11,6 +11,13 @@ import KVNProgress
 import Alamofire
 import Kingfisher
 
+extension Double {
+    func format(f: String) -> String {
+        return String(format: "%\(f)f", self)
+    }
+}
+
+
 class MainDescriptionTableViewController: UITableViewController {
 
     @IBOutlet weak var cervejariaLabel: UILabel!
@@ -21,7 +28,8 @@ class MainDescriptionTableViewController: UITableViewController {
     @IBOutlet weak var mediaLabel: UILabel!
     @IBOutlet weak var descricaoLabel: UITextView!
     @IBOutlet weak var cerveja_img: UIImageView!
-    
+    @IBOutlet weak var plugarBtn: UIButton!
+
     var tapSelecionado = Tap()
     
     override func viewDidLoad() {
@@ -31,6 +39,16 @@ class MainDescriptionTableViewController: UITableViewController {
         KVNProgress.show(withStatus: "Carregando", on: view)
         
         getBeer(bid: tapSelecionado.bid)
+    }
+    
+    @IBAction func buttonHandler(_ sender: AnyObject) {
+        
+        let newTap = Tap(abv: tapSelecionado.abv, ibu: tapSelecionado.ibu, cerveja: tapSelecionado.cerveja, cervejaria: tapSelecionado.cervejaria, estilo: tapSelecionado.estilo, nota: (Double(self.tapSelecionado.nota)?.format(f: ".2"))!, cervejaria_img_url: tapSelecionado.cervejaria_img_url, cerveja_img_url: tapSelecionado.cerveja_img_url, bid: tapSelecionado.bid, data_entrada: Int(Date().timeIntervalSince1970),status:"desativado")
+        newTap.save { (error) in
+            if error != nil{
+               print(error!)
+            }
+        }
     }
     
     func getBeer(bid:Int){
@@ -65,8 +83,8 @@ class MainDescriptionTableViewController: UITableViewController {
                 self.ibuLabel.text = String(self.tapSelecionado.ibu)
                 self.estiloLabel.text = self.tapSelecionado.estilo
                 self.emProducaoLabel.text = self.tapSelecionado.em_producao == 1 ? "Sim" : "Não"
-                self.mediaLabel.text = self.tapSelecionado.nota
-                self.descricaoLabel.text = self.tapSelecionado.descricao
+                self.mediaLabel.text = Double(self.tapSelecionado.nota)?.format(f: ".2")
+                self.descricaoLabel.text = self.tapSelecionado.descricao.isEmpty ? "Nenhuma descrição" : self.tapSelecionado.descricao
             
                 let urlCv = URL(string: self.tapSelecionado.cerveja_img_url)
                 self.cerveja_img.kf.setImage(with: urlCv, options: [.transition(.fade(0.2))])
