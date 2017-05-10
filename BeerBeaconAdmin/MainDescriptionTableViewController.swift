@@ -39,26 +39,21 @@ class MainDescriptionTableViewController: UITableViewController {
         setupConfig()
         KVNProgress.show(withStatus: "Carregando", on: view)
         
+        self.navigationItem.title = tapSelecionado.cerveja
+        
         getBeer(bid: tapSelecionado.bid)
     }
     
-    @IBAction func buttonHandler(_ sender: AnyObject) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let newMedida = Medida(preco: "30,00", quantidade: "100ml")
-        let newMedida2 = Medida(preco: "10,00", quantidade: "50ml")
-        
-        var med = [Medida]()
-        med.append(newMedida)
-        med.append(newMedida2)
-        
-        let newTap = Tap(abv: tapSelecionado.abv, ibu: tapSelecionado.ibu, cerveja: tapSelecionado.cerveja, cervejaria: tapSelecionado.cervejaria, estilo: tapSelecionado.estilo, nota: (Double(self.tapSelecionado.nota)?.format(f: ".2"))!, cervejaria_img_url: tapSelecionado.cervejaria_img_url, cerveja_img_url: tapSelecionado.cerveja_img_url, bid: tapSelecionado.bid, data_entrada: Int(Date().timeIntervalSince1970),status:"desativado",medidas:med)
-        
-        newTap.save { (error) in
-            if error != nil{
-               print(error!)
-            }
+        if(segue.identifier == "mostrarQuantPreco"){
+            
+            let controller = (segue.destination as! UITableViewController) as! MainQuantPrecoTableViewController
+            controller.tapSelecionado = tapSelecionado
+            
         }
     }
+
     
     func getBeer(bid:Int){
         
@@ -95,10 +90,12 @@ class MainDescriptionTableViewController: UITableViewController {
                 self.mediaLabel.text = Double(self.tapSelecionado.nota)?.format(f: ".2")
                 self.descricaoLabel.text = self.tapSelecionado.descricao.isEmpty ? "Nenhuma descrição" : self.tapSelecionado.descricao
             
-                let urlCv = URL(string: self.tapSelecionado.cerveja_img_url)
-                self.cerveja_img.kf.setImage(with: urlCv, options: [.transition(.fade(0.2))])
-                self.cerveja_img.kf.indicatorType = .activity
-                self.cerveja_img.kf.setImage(with: urlCv)
+                if(!self.tapSelecionado.cerveja_img_url.isEmpty){
+                    let urlCv = URL(string: self.tapSelecionado.cerveja_img_url)
+                    self.cerveja_img.kf.setImage(with: urlCv, options: [.transition(.fade(0.2))])
+                    self.cerveja_img.kf.indicatorType = .activity
+                    self.cerveja_img.kf.setImage(with: urlCv)
+                }
             
                 KVNProgress.dismiss()
         }

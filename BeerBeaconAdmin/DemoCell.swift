@@ -76,8 +76,8 @@ class DemoCell: FoldingCell {
             }, completion: nil)
         }
     
-    let tapStatusUpdate = Tap(abv: tap.abv, ibu: tap.ibu, cerveja: tap.cerveja, cervejaria: tap.cervejaria, estilo: tap.estilo, nota: tap.nota, cervejaria_img_url: tap.cervejaria_img_url, cerveja_img_url: tap.cerveja_img_url, bid: tap.bid, data_entrada:tap.data_entrada,status:optionEnableDisable.isOn == true ? "ativado" : "desativado",medidas:tap.medidas)
-        tapStatusUpdate.updateStatus(uid: tap.uid) { (error) in
+    let tapUpdate = Tap(abv: tap.abv, ibu: tap.ibu, cerveja: tap.cerveja, cervejaria: tap.cervejaria, estilo: tap.estilo, nota: tap.nota, cervejaria_img_url: tap.cervejaria_img_url, cerveja_img_url: tap.cerveja_img_url, bid: tap.bid, data_entrada:tap.data_entrada,status:optionEnableDisable.isOn == true ? "ativado" : "desativado",medidas:tap.medidas)
+        tapUpdate.update(uid: tap.uid) { (error) in
             if error != nil {
                 print(error!)
             }

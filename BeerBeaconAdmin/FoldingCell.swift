@@ -112,26 +112,31 @@ open class FoldingCell: UITableViewCell {
           hora_plugado.text = tap.hora_plug
           nota.text = tap.nota
           
-          if(tap.medidas.count != 0){
+          if(tap.medidas.count == 2){
              op1_copo.text = tap.medidas[0].quantidade
              op1_preco.text = "R$ \(tap.medidas[0].preco)"
              op2_copo.text = tap.medidas[1].quantidade
              op2_preco.text = "R$ \(tap.medidas[1].preco)"
           }
             
-          let urlCv = URL(string: tap.cerveja_img_url)
-          cerveja_img.kf.setImage(with: urlCv, options: [.transition(.fade(0.2))])
-          cerveja_img.kf.indicatorType = .activity
-          cerveja_img.kf.setImage(with: urlCv)
-          
-          cerveja_ext_img.kf.setImage(with: urlCv, options: [.transition(.fade(0.2))])
-          cerveja_ext_img.kf.indicatorType = .activity
-          cerveja_ext_img.kf.setImage(with: urlCv)
+          if(!tap.cerveja_img_url.isEmpty){
+            let urlCv = URL(string: tap.cerveja_img_url)
+            cerveja_img.kf.setImage(with: urlCv, options: [.transition(.fade(0.2))])
+            cerveja_img.kf.indicatorType = .activity
+            cerveja_img.kf.setImage(with: urlCv)
             
-          let urlCj = URL(string: tap.cervejaria_img_url)
-          cervejaria_img.kf.setImage(with: urlCj, options: [.transition(.fade(0.2))])
-          cervejaria_img.kf.indicatorType = .activity
-          cervejaria_img.kf.setImage(with: urlCj)
+            cerveja_ext_img.kf.setImage(with: urlCv, options: [.transition(.fade(0.2))])
+            cerveja_ext_img.kf.indicatorType = .activity
+            cerveja_ext_img.kf.setImage(with: urlCv)
+   
+          }
+           
+          if(!tap.cervejaria_img_url.isEmpty){
+            let urlCj = URL(string: tap.cervejaria_img_url)
+            cervejaria_img.kf.setImage(with: urlCj, options: [.transition(.fade(0.2))])
+            cervejaria_img.kf.indicatorType = .activity
+            cervejaria_img.kf.setImage(with: urlCj)
+          }
             
           if(tap.status == "desativado"){
                 optionEnableDisable.isOn = false

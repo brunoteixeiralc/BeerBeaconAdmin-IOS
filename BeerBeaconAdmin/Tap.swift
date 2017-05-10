@@ -103,10 +103,12 @@ class Tap {
             dtFmt.dateFormat = "HH:mm:ss"
             hora_plug = dtFmt.string(from: date as Date)
             
-            let medidaSnap = snapshot.childSnapshot(forPath: "medidas").children
-            while let m = medidaSnap.nextObject() as? FIRDataSnapshot {
-                let med = Medida(preco: (m.value as? [String:Any])?["preco"] as! String, quantidade: (m.value as? [String:Any])?["quantidade"] as! String)
-                medidas.append(med)
+            if let medidasDict = value["medidas"] as? [String:Any]{
+                for(medidaKey,medidaDict) in medidasDict{
+                    if let m = medidaDict as? [String:Any]{
+                        medidas.append(Medida(dictionary: m,uid:medidaKey))
+                    }
+                }
             }
         }
     }
@@ -121,10 +123,14 @@ class Tap {
         }
     }
     
-    func updateStatus(uid:String,completion:@escaping (Error?) -> Void){
+    func update(uid:String,completion:@escaping (Error?) -> Void){
         
         let ref = tapRef.child(uid)
         ref.setValue(toDictionary())
+        
+        for medida in medidas{
+            ref.child("medidas").child(medida.uid).setValue(medida.toDictionary())
+        }
     }
     
     func toDictionary() -> [String:Any]{

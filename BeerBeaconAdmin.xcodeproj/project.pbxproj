@@ -10,7 +10,6 @@
 		9873E417E502F649C723EE14 /* Pods_BeerBeaconAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7DC5B58E74915093201BE14 /* Pods_BeerBeaconAdmin.framework */; };
 		F4073A631EB2CBA800DE8391 /* UntappdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4073A621EB2CBA800DE8391 /* UntappdCell.swift */; };
 		F413B8BB1EB1854700076B22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413B8BA1EB1854700076B22 /* AppDelegate.swift */; };
-		F413B8BD1EB1854700076B22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413B8BC1EB1854700076B22 /* ViewController.swift */; };
 		F413B8C21EB1854700076B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F413B8C11EB1854700076B22 /* Assets.xcassets */; };
 		F413B8C51EB1854700076B22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F413B8C31EB1854700076B22 /* LaunchScreen.storyboard */; };
 		F413B8CD1EB185B500076B22 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = F413B8CC1EB185B500076B22 /* Podfile */; };
@@ -23,6 +22,7 @@
 		F413B8E71EB1883600076B22 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F413B8E61EB1883600076B22 /* GoogleService-Info.plist */; };
 		F413B8E91EB193BB00076B22 /* MainSearchUntappdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F413B8E81EB193BB00076B22 /* MainSearchUntappdViewController.swift */; };
 		F44B6EDD1EBCFA80008663D8 /* MainDescriptionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44B6EDC1EBCFA80008663D8 /* MainDescriptionTableViewController.swift */; };
+		F4C2754C1EC2990000A032D7 /* MainQuantPrecoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C2754B1EC2990000A032D7 /* MainQuantPrecoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,6 @@
 		F4073A621EB2CBA800DE8391 /* UntappdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UntappdCell.swift; sourceTree = "<group>"; };
 		F413B8B71EB1854700076B22 /* BeerBeaconAdmin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerBeaconAdmin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F413B8BA1EB1854700076B22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F413B8BC1EB1854700076B22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F413B8C11EB1854700076B22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F413B8C41EB1854700076B22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F413B8C61EB1854700076B22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		F413B8E61EB1883600076B22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F413B8E81EB193BB00076B22 /* MainSearchUntappdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSearchUntappdViewController.swift; sourceTree = "<group>"; };
 		F44B6EDC1EBCFA80008663D8 /* MainDescriptionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDescriptionTableViewController.swift; sourceTree = "<group>"; };
+		F4C2754B1EC2990000A032D7 /* MainQuantPrecoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainQuantPrecoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +116,10 @@
 				F413B8E01EB187B000076B22 /* DemoCell.swift */,
 				F413B8E11EB187B000076B22 /* FoldingCell.swift */,
 				F413B8E21EB187B000076B22 /* MainTableViewController.swift */,
+				F4C2754B1EC2990000A032D7 /* MainQuantPrecoTableViewController.swift */,
 				F44B6EDC1EBCFA80008663D8 /* MainDescriptionTableViewController.swift */,
 				F413B8E81EB193BB00076B22 /* MainSearchUntappdViewController.swift */,
 				F4073A621EB2CBA800DE8391 /* UntappdCell.swift */,
-				F413B8BC1EB1854700076B22 /* ViewController.swift */,
 				F413B8C11EB1854700076B22 /* Assets.xcassets */,
 				F413B8C31EB1854700076B22 /* LaunchScreen.storyboard */,
 				F413B8C61EB1854700076B22 /* Info.plist */,
@@ -281,7 +281,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F413B8BD1EB1854700076B22 /* ViewController.swift in Sources */,
 				F413B8D41EB1873B00076B22 /* Tap.swift in Sources */,
 				F413B8D31EB1873B00076B22 /* Medida.swift in Sources */,
 				F413B8BB1EB1854700076B22 /* AppDelegate.swift in Sources */,
@@ -290,6 +289,7 @@
 				F413B8E41EB187B000076B22 /* FoldingCell.swift in Sources */,
 				F413B8E91EB193BB00076B22 /* MainSearchUntappdViewController.swift in Sources */,
 				F413B8E51EB187B000076B22 /* MainTableViewController.swift in Sources */,
+				F4C2754C1EC2990000A032D7 /* MainQuantPrecoTableViewController.swift in Sources */,
 				F44B6EDD1EBCFA80008663D8 /* MainDescriptionTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
