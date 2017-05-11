@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import OneSignal
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         FIRApp.configure()
         
+        OneSignal.initWithLaunchOptions(launchOptions, appId: "42f9ce69-ceea-42b3-8639-68e0ecf6f9f6")
+        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
+        
+//        OneSignal.idsAvailable { (pushID, pushToken) in
+//            print(pushID)
+//            print(pushToken)
+//        }
+
         return true
     }
 
