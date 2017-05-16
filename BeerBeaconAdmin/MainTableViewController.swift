@@ -54,7 +54,9 @@ class MainTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-         if self.taps.count == 0 {
+     //  self.navigationItem.rightBarButtonItem.badgeValue = "5";
+        
+        if self.taps.count == 0 {
             
             FIRDatabase.database().reference().child("taps").observe(.value, with: { (snapshot) in
                 
