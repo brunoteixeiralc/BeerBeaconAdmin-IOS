@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import OneSignal
 
 class MainOrderTableViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -41,7 +42,13 @@ class MainOrderTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.delete) {
-            // handle delete (by removing the data from your array and updating the tableview)
+            
+            OneSignal.postNotification(["contents": ["en": "O seu pedido já foi feito. Daqui a pouco você irá receber sua cerveja.Cheers!"],"include_player_ids" : ["7348f1b1-f1ed-4ac7-b5b4-195a01735abc","3600a1df-95c7-4f14-8ec8-0fa52aa8a4c7","786e88c5-db74-4dcc-a88b-daa38e653581"],
+                                        "subtitle" :["en" : "Cartão Virtual : 01"]], onSuccess: { (_: Any) in }, onFailure: { (error) in
+                                            print(error as Any)
+            })
+
+            tableView.reloadData()
         }
     }
     

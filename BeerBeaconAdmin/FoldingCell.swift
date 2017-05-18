@@ -35,11 +35,7 @@ open class FoldingCell: UITableViewCell {
   @IBOutlet weak var ibu_interno: UILabel!
   @IBOutlet weak var abv_interno: UILabel!
   @IBOutlet weak var estilo_interno: UILabel!
-  
-  @IBOutlet weak var op1_copo: UILabel!
-  @IBOutlet weak var op1_preco: UILabel!
-  @IBOutlet weak var op2_copo: UILabel!
-  @IBOutlet weak var op2_preco: UILabel!
+
   
   @IBOutlet weak open var containerView: UIView!
   @IBOutlet weak open var containerViewTop: NSLayoutConstraint!
@@ -55,7 +51,11 @@ open class FoldingCell: UITableViewCell {
     
   @IBOutlet weak var optionEnableDisable: UISwitch!
   @IBOutlet weak var view_disable: UIView!
-
+    
+  @IBOutlet weak var op1_copo: UITextField!
+  @IBOutlet weak var op1_preco: UITextField!
+  @IBOutlet weak var op2_copo: UITextField!
+  @IBOutlet weak var op2_preco: UITextField!
     
   /// UIView whitch display when cell close
   @IBOutlet weak open var foregroundView: RotatedView!
@@ -114,9 +114,9 @@ open class FoldingCell: UITableViewCell {
           
           if(tap.medidas.count == 2){
              op1_copo.text = tap.medidas[0].quantidade
-             op1_preco.text = "R$ \(tap.medidas[0].preco)"
+             op1_preco.text = tap.medidas[0].preco
              op2_copo.text = tap.medidas[1].quantidade
-             op2_preco.text = "R$ \(tap.medidas[1].preco)"
+             op2_preco.text = tap.medidas[1].preco
           }
             
           if(!tap.cerveja_img_url.isEmpty){

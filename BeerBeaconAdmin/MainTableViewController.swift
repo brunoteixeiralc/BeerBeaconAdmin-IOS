@@ -143,27 +143,27 @@ class MainTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-//        let cell = tableView.cellForRow(at: indexPath) as! FoldingCell
-//        
-//        if cell.isAnimating() {
-//            return
-//        }
-//        
-//        var duration = 0.0
-//        if cellHeights[(indexPath as NSIndexPath).row] == kCloseCellHeight { // open cell
-//            cellHeights[(indexPath as NSIndexPath).row] = kOpenCellHeight
-//            cell.selectedAnimation(true, animated: true, completion: nil)
-//            duration = 0.5
-//        } else {// close cell
-//            cellHeights[(indexPath as NSIndexPath).row] = kCloseCellHeight
-//            cell.selectedAnimation(false, animated: true, completion: nil)
-//            duration = 0.8
-//        }
-//        
-//        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { () -> Void in
-//            tableView.beginUpdates()
-//            tableView.endUpdates()
-//        }, completion: nil)
+        let cell = tableView.cellForRow(at: indexPath) as! FoldingCell
+        
+        if cell.isAnimating() {
+            return
+        }
+        
+        var duration = 0.0
+        if cellHeights[(indexPath as NSIndexPath).row] == kCloseCellHeight { // open cell
+            cellHeights[(indexPath as NSIndexPath).row] = kOpenCellHeight
+            cell.selectedAnimation(true, animated: true, completion: nil)
+            duration = 0.5
+        } else {// close cell
+            cellHeights[(indexPath as NSIndexPath).row] = kCloseCellHeight
+            cell.selectedAnimation(false, animated: true, completion: nil)
+            duration = 0.8
+        }
+        
+        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { () -> Void in
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }, completion: nil)
 
         
     }
